@@ -78,7 +78,6 @@ void MainWindow::LoadImg()
         img = img.scaled(ui->QL_src->width(),ui->QL_src->height());
         ui->QL_src->setPixmap(QPixmap::fromImage(img));
     }
-
 }
 
 void MainWindow::QLabel_Pic_Init()
@@ -175,29 +174,48 @@ void MainWindow::on_form_black_clicked()
 //--均值滤波--
 void MainWindow::on_filter_aver_clicked()
 {
-
+     blur(srcImage, dstImage, Size(11, 11), Point(-1, -1));
+     putQlabel();
 }
 
 //--方框滤波--
 void MainWindow::on_filter_box_clicked()
 {
-
+    boxFilter( srcImage, dstImage, -1, Size( 16, 16 ), Point(-1,-1));
+    putQlabel();
 }
 
 //--高斯滤波--
 void MainWindow::on_filter_gaussian_clicked()
 {
-
+    GaussianBlur(srcImage, dstImage, Size(11, 11), 11, 11);
+    putQlabel();
 }
 
 //--中值滤波--
 void MainWindow::on_filter_median_clicked()
 {
+    medianBlur(srcImage, dstImage, 3);
+    putQlabel();
 
 }
 
 //--双边滤波--
 void MainWindow::on_filter_bilateral_clicked()
+{
+    bilateralFilter(srcImage, dstImage, 15, 100, 5);
+    putQlabel();
+}
+
+//--提取水平线--
+void MainWindow::on_get_hor_clicked()
+{
+
+
+}
+
+//--提取垂直线--
+void MainWindow::on_get_ver_clicked()
 {
 
 }

@@ -70,6 +70,8 @@ private slots:
     void on_filter_gaussian_clicked();
     void on_filter_median_clicked();
     void on_filter_bilateral_clicked();
+    void on_get_hor_clicked();
+    void on_get_ver_clicked();
 };
 
 #endif // MAINWINDOW_H

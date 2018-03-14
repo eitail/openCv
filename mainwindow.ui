@@ -235,6 +235,32 @@
      <string>均值滤波</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="get_hor">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>310</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>提取水平线</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="get_ver">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>350</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>提取垂直线</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>
